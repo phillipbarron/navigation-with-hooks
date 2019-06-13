@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-function NavigationProvider({ breakpoint }) {
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
+function NavigationProvider({ breakpoint, renderDesktop, renderMobile }) {
+  const [windowWidth, setWindowSize] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
       setWindowSize(window.innerWidth);
@@ -11,13 +11,12 @@ function NavigationProvider({ breakpoint }) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  const navigation = windowWidth > breakpoint ? renderDesktop : renderMobile;
   return (
     <div>
-      <div>the current window size is {windowSize}</div>
+      <div>the current window width is {windowWidth}</div>
       <div>the breakpoint is {breakpoint}</div>
-      {breakpoint > windowSize &&
-        <div>BREAKPOINT EXCEEDED</div>
-      }
+      {  navigation() }
     </div>
   );
 }

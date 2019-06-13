@@ -2,14 +2,18 @@ import React from 'react';
 import './App.css';
 import ResponsiveNavigation from './navigation/responsive-navigation';
 import WindowDimensionsProvider from './window-dimensions-provider';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
 function App() {
   return (
-    <WindowDimensionsProvider>
-      <div className="App">
-        <ResponsiveNavigation breakpoint={768} />
-      </div>
-    </WindowDimensionsProvider>
+    <Router history={createBrowserHistory()}>
+      <WindowDimensionsProvider>
+        <div className="App">
+          <ResponsiveNavigation breakpoint={350} />
+        </div>
+      </WindowDimensionsProvider>
+    </Router>
   );
 }
 

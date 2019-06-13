@@ -31,3 +31,12 @@
     transform: rotate(360deg);
   }
 }
+.nav-item__link--active {
+  color: red;
+}
+.nav-item__link {
+  padding: 8px;
+}
+.NavLink__label {
+  text-transform: capitalize;
+}

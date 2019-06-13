@@ -5,7 +5,13 @@ import DesktopNavigation from "./desktop-navigation";
 
 function ResponsiveNavigation({ breakpoint }) {
   const { width } = useWindowDimensions();
-  return width < breakpoint ? <MobileNavigation options={ [{value: 'true',label: 'True'},{value: 'false',label: 'False'}] } /> : <DesktopNavigation />;
+  const navigationOptions = [
+    'editor',
+    'history',
+    'settings',
+  ];
+
+  return width < breakpoint ? <MobileNavigation options={ navigationOptions } /> : <DesktopNavigation options={ navigationOptions } />;
 }
 
 export default ResponsiveNavigation;

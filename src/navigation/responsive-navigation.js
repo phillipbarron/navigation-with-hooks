@@ -3,7 +3,7 @@ import { useWindowDimensions } from '../window-dimensions-provider';
 import MobileNavigation from "./mobile-navigation";
 import DesktopNavigation from "./desktop-navigation";
 
-function ResponsiveNavigation({ breakpoint }) {
+function ResponsiveNavigation({ breakpoint  }) {
   const { width } = useWindowDimensions();
   const navigationOptions = [
     'editor',

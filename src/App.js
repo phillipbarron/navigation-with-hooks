@@ -10,7 +10,7 @@ function App() {
     <Router history={createBrowserHistory()}>
       <WindowDimensionsProvider>
         <div className="App">
-          <ResponsiveNavigation breakpoint={350} />
+          <ResponsiveNavigation breakpoint={768} />
         </div>
       </WindowDimensionsProvider>
     </Router>

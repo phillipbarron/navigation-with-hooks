@@ -5,7 +5,7 @@ function NavigationProvider() {
 
   return (
     <div>
-      {windowSize}
+      the current window size is {windowSize}
     </div>);
 }
 

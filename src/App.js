@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import NavigationProvider from './navigation-provider';
+import ResponsiveNavigation from './navigation/responsive-navigation';
 import WindowDimensionsProvider from './window-dimensions-provider';
 
 function App() {
   return (
     <WindowDimensionsProvider>
       <div className="App">
-        <NavigationProvider breakpoint={768} renderDesktop={ () => <div>desktop</div>} renderMobile={ () => <div>mobile</div>} />
+        <ResponsiveNavigation breakpoint={768} />
       </div>
     </WindowDimensionsProvider>
   );

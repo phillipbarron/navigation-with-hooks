@@ -1,9 +1,11 @@
 import React from 'react';
+import Dropdown from '@bbc/igm-dropdown-select';
+import '@bbc/igm-dropdown-select/dist/DropdownSelect.css';
 
-function MobileNavigation() {
+function MobileNavigation( { options } ) {
     return (
         <div>
-            MOBILE AF!
+            <Dropdown options={options}/>
         </div>
     );
 }

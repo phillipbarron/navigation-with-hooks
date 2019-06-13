@@ -5,7 +5,7 @@ import NavigationProvider from './navigation-provider';
 function App() {
   return (
     <div className="App">
-      <NavigationProvider />
+      <NavigationProvider breakpoint={768} />
     </div>
   );
 }

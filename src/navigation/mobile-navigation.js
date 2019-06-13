@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Dropdown from "@bbc/igm-dropdown-select";
 import { withRouter } from "react-router-dom";
 import "@bbc/igm-dropdown-select/dist/DropdownSelect.css";
+import capitalise from '../text-helpers';
 
 function MobileNavigation({ options, history }) {
   const dropDownOptions = options.map(option => {
-    return { value: option, label: option };
+    return { value: option, label: capitalise(option) };
   });
 
   const getCurrentOption = () =>
@@ -16,17 +17,17 @@ function MobileNavigation({ options, history }) {
   const [selectedOption, setSelectedOption] = useState(getCurrentOption());
 
   const handleSelect = option => {
-    console.log('options', JSON.stringify(option, null, 2));
     setSelectedOption(option);
-    console.log('selectedOption', JSON.stringify(option, null, 2));
     history.push(`/${option.value}`);
   };
+
   return (
     <div>
       <Dropdown
         options={dropDownOptions}
         value={selectedOption}
         onChange={handleSelect}
+        useDropdownIndicator
       />
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav, NavLink } from './nav-link';
+import capitalise from '../text-helpers';
 
 function DesktopNavigation({ options }) {
     const GAOnEvents = 'click,auxclick,contextmenu';
@@ -11,7 +12,7 @@ function DesktopNavigation({ options }) {
             ga-event-category={`${location} Tab Link`}
             key={key}
         >
-            <span className="NavLink__label">{location}</span>
+            <span className="NavLink__label">{capitalise(location)}</span>
         </NavLink>
     return (
         <Nav>

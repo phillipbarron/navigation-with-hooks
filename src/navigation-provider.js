@@ -1,22 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useWindowDimensions } from './window-dimensions-provider';
 
 function NavigationProvider({ breakpoint, renderDesktop, renderMobile }) {
-  const [windowWidth, setWindowSize] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-  const navigation = windowWidth > breakpoint ? renderDesktop : renderMobile;
+  const { width } = useWindowDimensions();
+  const navigation = width > breakpoint ? renderDesktop : renderMobile;
   return (
     <div>
-      <div>the current window width is {windowWidth}</div>
+      <div>the current window width is {width}</div>
       <div>the breakpoint is {breakpoint}</div>
-      {  navigation() }
+      { navigation() }
     </div>
   );
 }

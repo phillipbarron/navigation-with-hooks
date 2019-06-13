@@ -36,4 +36,10 @@
 }
 .nav-item__link {
   padding: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-container {
+  padding: 8px;
 }

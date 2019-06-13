@@ -21,7 +21,7 @@ function NavLink(props) {
 
 
 NavLink.propTypes = {
-  to: PropTypes.string.isRequired, // the same as https://reacttraining.com/react-router/web/api/Link/to-string
+  to: PropTypes.string.isRequired
 };
 
 

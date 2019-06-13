@@ -8,11 +8,9 @@ function ResponsiveNavigation({ breakpoint }) {
 
   const navigationOptions = ["editor", "history", "settings"];
 
-  return width < breakpoint ? (
-    <MobileNavigation options={navigationOptions} />
-  ) : (
-    <DesktopNavigation options={navigationOptions} />
-  );
+  return width < breakpoint ?
+    <MobileNavigation options={navigationOptions} /> :
+    <DesktopNavigation options={navigationOptions} />;
 }
 
 export default ResponsiveNavigation;

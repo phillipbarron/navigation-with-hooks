@@ -19,7 +19,7 @@ const WindowDimensionsProvider = ({ children }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  });
+  }, []);
 
   return (
     <WindowDimensionsContext.Provider value={dimensions}>

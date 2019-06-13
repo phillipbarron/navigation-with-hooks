@@ -7,6 +7,7 @@ const WindowDimensionsProvider = ({ children }) => {
     width: window.innerWidth,
     height: window.innerHeight
   });
+
   useEffect(() => {
     const handleResize = () => {
       setDimensions({
@@ -18,7 +19,8 @@ const WindowDimensionsProvider = ({ children }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  });
+
   return (
     <WindowDimensionsContext.Provider value={dimensions}>
       {children}

@@ -5,8 +5,8 @@ import * as ReactRouter from 'react-router-dom';
 function NavLink(props) {
   function relativePathMatches(match, location) {
     return (
-      location.pathname === props.to
-      || location.pathname.endsWith(`/${props.to}`)
+      location.pathname === props.to ||
+      location.pathname.endsWith(`/${props.to}`)
     );
   }
   return (

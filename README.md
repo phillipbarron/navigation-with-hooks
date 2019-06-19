@@ -9,3 +9,7 @@ uses Hooks and Context API to provide screen dimentiosn thoughout the app withou
 ```bash
 npm run start
 ```
+
+### Edit
+
+this all works but we're using JS to solve a problem that CSS can solve faster

@@ -19,11 +19,9 @@ function NavLink(props) {
   );
 }
 
-
 NavLink.propTypes = {
   to: PropTypes.string.isRequired
 };
-
 
 function Nav(props) {
   return (

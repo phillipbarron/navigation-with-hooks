@@ -1,4 +1,4 @@
-# create-react-app bootstrapped app to test navigaiton conponent
+# responsive navigaiton component using all the hooks
 
 the intent is to create a component to return set of navgation controls based on current screen size.
 

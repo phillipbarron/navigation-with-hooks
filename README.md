@@ -1,4 +1,4 @@
-# responsive navigaiton component using all the hooks
+# Responsive navigation component using all the hooks
 
 the intent is to create a component to return a set of navgation controls based on the current screen size.
 

@@ -1,8 +1,8 @@
 # responsive navigaiton component using all the hooks
 
-the intent is to create a component to return set of navgation controls based on current screen size.
+the intent is to create a component to return a set of navgation controls based on the current screen size.
 
-uses Hooks and Context API to provide screen dimentiosn thoughout the app without prop-drilling / lots of event listeners.
+This uses Hooks and Context API to provide screen dimentions thoughout the app without prop-drilling / lots of event listeners.
 
 ## Running
 
@@ -12,5 +12,5 @@ npm run start
 
 ### Edit
 
-this all works but we're using JS to solve a problem that CSS can solve faster
+this all works but we're using JS to solve a problem that CSS can solve waaaay faster
 🖕
